@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+:root {
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f9fafb;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+.container {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  height: 80vh;
+}
+h2 {
+  text-align: center;
+  margin: 0 0 10px;
+  font-size: 2rem;
+  color: rgb(94, 91, 89);
+}
+p {
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgb(148, 145, 142);
+}
+.terms {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgb(148, 145, 142);
+}
+.terms a {
+  color: #57a168;
+  text-decoration: none;
+}
+.showHide {
+  font-size: 15px;
+  color: rgb(53, 52, 51);
+}
+.form {
+  padding: 30px 40px;
+  height: 100%;
+}
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+  border-bottom: 1px solid #777;
+  /* border: 1px solid black; */
+  height: 12%;
+}
+.form-control i {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  font-size: 20px;
+  color: rgb(78, 74, 74);
+}
+.form-control input {
+  position: absolute;
+  left: 10%;
+  bottom: 10px;
+}
+.form-control input {
+  width: 100%;
+  padding: 10px;
+  padding-left: 5px;
+  font-size: 1rem;
+  border: none;
+}
+
+.form-control input:focus {
+  outline: 0;
+  border: none;
+}
+.form-control.success {
+  border-bottom-color: var(--success-color);
+}
+.form-control.error {
+  border-bottom-color: var(--error-color);
+}
+
+.form-control small {
+  color: var(--error-color);
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+.form button {
+  background-color: #57a168;
+  border: 2px solid #57a168;
+  border-radius: 4px;
+  color: #fff;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 200ms linear ease-in-out;
+  outline: none;
+}
+.form button:hover {
+  background-color: rgb(12, 196, 43);
+  border: 2px solid rgb(12, 196, 43);
+}
+.form input::placeholder {
+  font-size: 0.9rem;
+  color: rgb(148, 145, 142);
+}
+@media only screen and (max-width: 770px) {
+  .container {
+    height: 88vh;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .container {
+    width: 95%;
+    height: 95vh;
+  }
+  .form-control small {
+    font-size: 11px;
+    width: 100%;
+    text-align: left;
+  }
+}
